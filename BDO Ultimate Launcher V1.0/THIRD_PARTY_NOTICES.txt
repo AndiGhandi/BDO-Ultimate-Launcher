@@ -1,0 +1,52 @@
+BDO Ultimate Launcher
+Copyright (c) 2026 AndiGhandi
+
+This project may include support for, reference, or distribute third-party
+software components. Ownership of such software remains with its respective
+authors and copyright holders.
+
+-----------------------------------------------------------------------
+NVIDIA Profile Inspector
+-----------------------------------------------------------------------
+
+NVIDIA Profile Inspector is not part of the BDO Ultimate Launcher project.
+
+All rights, copyrights, trademarks, licenses, and ownership related to
+NVIDIA Profile Inspector remain the property of its respective authors and
+copyright holders.
+
+Official Project:
+https://github.com/Orbmu2k/nvidiaProfileInspector
+
+BDO Ultimate Launcher does not claim ownership of NVIDIA Profile Inspector,
+its source code, binaries, trademarks, or associated intellectual property.
+
+-----------------------------------------------------------------------
+NVIDIA Trademarks
+-----------------------------------------------------------------------
+
+NVIDIA, GeForce, RTX, DLSS, and related marks are trademarks or registered
+trademarks of NVIDIA Corporation.
+
+All NVIDIA trademarks remain the property of NVIDIA Corporation.
+
+-----------------------------------------------------------------------
+Black Desert Online
+-----------------------------------------------------------------------
+
+Black Desert Online, Pearl Abyss, associated game assets, trademarks,
+logos, and intellectual property remain the property of Pearl Abyss Corp.
+
+BDO Ultimate Launcher is an independent community-created utility and is
+not affiliated with, endorsed by, sponsored by, or officially connected
+to Pearl Abyss Corp.
+
+-----------------------------------------------------------------------
+Disclaimer
+-----------------------------------------------------------------------
+
+All third-party trademarks, software, copyrights, and intellectual property
+mentioned within this project remain the property of their respective owners.
+
+The inclusion of support for third-party software does not imply ownership,
+partnership, endorsement, or affiliation.
