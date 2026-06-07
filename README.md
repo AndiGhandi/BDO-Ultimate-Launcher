@@ -1,4 +1,4 @@
-# BDO Ultimate Launcher v1.0
+# BDO Ultimate Launcher
 
 ![Preview](preview.png)
 
