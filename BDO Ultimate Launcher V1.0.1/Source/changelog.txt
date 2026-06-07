@@ -1,0 +1,14 @@
+v1.0.1 	2026/06/08
+- Improved window dragging smoothness
+- Reworked drag handling to use native pointer coordinates
+- Fixed dragging jitter reported on Windows 11 high refresh rate displays
+
+
+
+v1.0 	2026/06/07
+- Initial Release
+- NVIDIA Profile Inspector Integration
+- CPU Affinity Support
+- AMD Compatibility
+- Steam / Standalone Support
+- Embedded Assets
