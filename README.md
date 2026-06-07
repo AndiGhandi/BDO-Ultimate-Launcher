@@ -2,6 +2,15 @@
 
 ![Preview](preview.png)
 
+------------------------------------------------------------------------------------------------------------------------
+BDO Ultimate Launcher does not modify game files,
+inject code into the game process, automate gameplay,
+or interact with Black Desert Online memory.
+
+The launcher only manages CPU affinity settings,
+launch parameters, and optional NVIDIA driver profiles.
+------------------------------------------------------------------------------------------------------------------------
+
 Created by AndiGhandi
 
 A lightweight launcher for Black Desert Online featuring:
