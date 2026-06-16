@@ -142,17 +142,17 @@ Please refer to NVIDIA documentation for the latest supported hardware.
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Nodewar Performance Profiles
+# Node War Performance Profiles
 
 The launcher includes additional NVIDIA Profile Inspector profiles.
 
- SEMIPOTATO
+## SEMIPOTATO
 
-A moderate performance profile intended to improve Visibility (and FPS but that depends on your System).
+A moderate visibility-focused profile intended for large-scale PvP.
 
- GIGAPOTATO
+## GIGAPOTATO
 
-An aggressive performance profile intended to maximize Visibility.
+A more aggressive visibility-focused profile intended to reduce visual clutter as much as possible.
 
 Examples of optimizations may include:
 
@@ -160,13 +160,96 @@ Examples of optimizations may include:
 * Reducing visual overhead
 * Adjusting driver-level rendering options
 
-For best results for the Potato settings:
+These profiles are primarily designed for:
 
-* Use High Textures and Optimal graphics settings in Black Desert Online
-* Disable Effects in-game when appropriate
-* Adjust settings according to your own hardware and preferences
+* Node Wars
+* Siege Wars
+* Large-scale PvP
 
-Results will vary depending on hardware, game settings, and game updates.
+They are not guaranteed to provide substantial FPS gains.
+
+On modern hardware, the primary benefit is usually improved visibility and reduced visual clutter rather than dramatically higher frame rates.
+
+## Recommended In-Game Settings
+
+When selecting SEMIPOTATO or GIGAPOTATO, the launcher will display a recommendation popup.
+
+For best results:
+
+* Texture Quality: High
+* Graphics: Lowest / Optimal
+* Effect Opacity: 30 (minimum value)
+
+These settings generally provide the best experience when using the included Potato profiles.
+
+The popup can be disabled at any time by unticking:
+
+Show Potato Popup
+
+within the launcher.
+
+---
+
+# Custom NVIDIA Profiles
+
+Version 1.0.2 introduces support for custom NVIDIA Profile Inspector profiles.
+
+The launcher automatically monitors the Profiles directory and will detect newly added .nip files without requiring a launcher restart.
+
+Custom profiles are stored in:
+
+%APPDATA%\BDO Ultimate Launcher\Profiles
+
+Example:
+
+C:\Users\YourUsername\AppData\Roaming\BDO Ultimate Launcher\Profiles
+
+## Creating a Custom Profile
+
+1. Launch BDO Ultimate Launcher
+2. Click "Create / Edit Custom Profiles"
+3. NVIDIA Profile Inspector will open
+4. Select the profile:
+
+Black Desert
+
+5. Make your desired changes
+6. Click:
+
+Export User Defined Profiles
+
+7. Save the exported .nip file into:
+
+%APPDATA%\BDO Ultimate Launcher\Profiles
+
+The launcher will automatically detect the new profile and add it to the Profile dropdown menu.
+
+NVIDIA Profile Inspector:
+
+https://github.com/Orbmu2k/nvidiaProfileInspector
+
+## Important
+
+Custom NVIDIA profiles are entirely user-created and user-maintained.
+
+If you are not familiar with NVIDIA Profile Inspector settings, it is strongly recommended to stay with the included default profiles:
+
+* Smooth OFF
+* Smooth ON
+* SEMIPOTATO
+* GIGAPOTATO
+
+Incorrect NVIDIA Profile Inspector settings may result in:
+
+* Reduced performance
+* Visual glitches
+* Driver instability
+* Unexpected game behavior
+
+Use custom profiles entirely at your own risk.
+
+The author of BDO Ultimate Launcher does not provide support for arbitrary custom NVIDIA Profile Inspector configurations.
+
 
 ------------------------------------------------------------------------------------------------------------------------
 

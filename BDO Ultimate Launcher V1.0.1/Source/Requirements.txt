@@ -1,5 +1,0 @@
-Python
-customtkinter
-pillow
-pyinstaller
-pywin32
