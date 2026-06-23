@@ -16,19 +16,51 @@ import subprocess
 import webbrowser
 import shutil
 
+
+# =====================================
+# DPI AWARENESS
+# =====================================
+def enable_dpi_awareness():
+    try:
+        # Per-monitor DPI awareness
+        ctypes.windll.user32.SetProcessDpiAwarenessContext(-4)
+        return
+    except Exception:
+        pass
+
+    try:
+        # Windows 8.1+ fallback
+        ctypes.windll.shcore.SetProcessDpiAwareness(2)
+        return
+    except Exception:
+        pass
+
+    try:
+        # Legacy fallback
+        ctypes.windll.user32.SetProcessDPIAware()
+    except Exception:
+        pass
+
+enable_dpi_awareness()
+
 import customtkinter as ctk
+
+try:
+    ctk.deactivate_automatic_dpi_awareness()
+except Exception:
+    pass
+
 from tkinter import filedialog, messagebox
 from PIL import Image
 
 CONFIG_FILE = "config.ini"
-VERSION = "1.0.2"
+VERSION = "1.0.3"
 
 LAUNCHER_GITHUB_URL = "https://github.com/AndiGhandi/BDO-Ultimate-Launcher"
 NPI_GITHUB_URL = "https://github.com/Orbmu2k/nvidiaProfileInspector"
 AFFINITY_GUIDE_URL = "https://docs.google.com/document/d/1cyLaDiPL_B6nOZw_qPE_wOGuoeRT-qddTjevTFoFBkg/view?tab=t.0#heading=h.rl325eap4pk9"
 
-# Used as CustomTkinter background color behind rounded UI corners.
-# This prevents gray corner artifacts while matching the artwork reasonably well.
+# Background color used for panel corner rendering.
 PANEL_CORNER_BG = "#0A0D11"
 
 APP_FOLDER = os.path.join(
@@ -237,7 +269,7 @@ def load_config():
                 show_potato_popup_var.set(value == "1")
 
             elif key == "PROFILE":
-                # Only set it if the profile exists; otherwise keep default.
+                # Keep default if saved profile is unavailable.
                 if value in detect_profiles():
                     profile_var.set(value)
 
@@ -426,7 +458,7 @@ def launch_game():
         )
         return
 
-    # NVIDIA Profile Import (optional)
+    # Optional NVIDIA profile import
     if nvidia_var.get():
 
         if not os.path.exists(inspector):
@@ -459,7 +491,7 @@ def launch_game():
 
     steam_arg = " -Steam" if steam_var.get() else ""
 
-    # CPU Affinity optional
+    # Optional CPU affinity
     if affinity_enabled_var.get():
 
         launch_cmd = (
@@ -486,6 +518,9 @@ def launch_game():
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("dark-blue")
 
+ctk.set_widget_scaling(1.0)
+ctk.set_window_scaling(1.0)
+
 root = ctk.CTk()
 root.title("BDO Ultimate Launcher")
 root.configure(fg_color=PANEL_CORNER_BG)
@@ -494,9 +529,8 @@ myappid = "BDOUltimateLauncher.1.0"
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 root.geometry("1024x1024")
-root.resizable(True, True)
-root.minsize(900, 900)
-root.maxsize(1024, 1024)
+root.resizable(False, False)
+# Fixed window size.
 
 root.overrideredirect(True)
 
@@ -573,7 +607,7 @@ left_panel = ctk.CTkFrame(
     bg_color=PANEL_CORNER_BG
 )
 
-# Moved the UI panel upward so the BDO Launcher text in the background remains visible.
+# Main configuration panel.
 left_panel.place(x=80, y=100)
 
 
@@ -871,7 +905,7 @@ npi_footer_link = ctk.CTkLabel(
     cursor="hand2"
 )
 
-# Placed below the BDO Launcher text on the background.
+# Footer link.
 npi_footer_link.place(x=190, y=963)
 
 npi_footer_link.bind(

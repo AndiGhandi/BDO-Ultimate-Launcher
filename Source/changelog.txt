@@ -1,3 +1,6 @@
+v1.0.3 2026/06/23
+- Windows Display Scaling Fix
+
 v1.0.2 2026/06/16
 
 - Added custom NVIDIA Profile Inspector profile support
